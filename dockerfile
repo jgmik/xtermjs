@@ -3,6 +3,7 @@ FROM node:18.13.0-alpine as builder
 WORKDIR /app
 
 COPY package*.json ./
+COPY . .
 
 RUN yarn --version
 RUN yarn install-addons
