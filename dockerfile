@@ -4,9 +4,10 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN yarn presetup
-RUN yarn install
-COPY . .
+RUN yarn --version
+# RUN yarn presetup
+# RUN yarn install
+# COPY . .
 
 # COPY ./src/keycloak/keycloak_dev.json ./src/keycloak/keycloak.json
 
