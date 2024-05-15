@@ -2,9 +2,12 @@ FROM node:18.13.0-alpine as builder
 
 WORKDIR /app
 
+RUN echo 'test'
+RUN ls -al
 COPY package*.json ./
 COPY . .
 
+RUN ls -al
 RUN yarn --version
 RUN yarn install-addons
 # RUN yarn install
