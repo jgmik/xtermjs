@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package*.json ./
 
 RUN yarn --version
-# RUN yarn presetup
+RUN yarn install-addons
 # RUN yarn install
 # COPY . .
 
