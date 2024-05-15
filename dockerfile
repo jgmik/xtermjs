@@ -4,10 +4,9 @@ WORKDIR /app
 
 COPY package*.json ./
 
-# RUN npm install
-# RUN npm i sass-loader
-# RUN npm i node-sass
-# COPY . .
+RUN yarn install-addon
+RUN yarn install
+COPY . .
 
 # COPY ./src/keycloak/keycloak_dev.json ./src/keycloak/keycloak.json
 
