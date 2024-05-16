@@ -5,7 +5,7 @@ WORKDIR /app
 RUN echo 'test'
 RUN ls -al
 COPY package*.json ./
-
+RUN apt install python3
 RUN ls -al
 RUN yarn --version
 RUN npm --version
