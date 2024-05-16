@@ -1,5 +1,9 @@
-FROM node:18.13.0-alpine as builder
-
+FROM node:18.13.0 as builder
+RUN apt-get update && apt-get install -y \
+    python3 \
+    python3-pip \
+    build-essential \
+    && npm install -g node-gyp
 WORKDIR /app
 
 RUN echo 'test'
@@ -8,15 +12,15 @@ COPY package*.json ./
 COPY . .
 
 RUN grep . /etc/*-release
-RUN apk add python3
-RUN apk add make
-RUN apk add gcc
+# RUN apk add python3
+# RUN apk add make
+# RUN apk add gcc
 
 RUN ls -al
 RUN yarn --version
 RUN npm --version
 RUN python --version
-RUN npm config set python /usr/bin
+# RUN npm config set python /usr/bin
 # RUN pip3 --version
 # RUN yarn install-addons
 # RUN yarn install
