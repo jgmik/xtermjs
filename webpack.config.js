@@ -44,5 +44,11 @@ const config = {
     globalObject: 'globalThis',
   },
   mode: 'production',
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+  }
 };
 module.exports = config;
+
