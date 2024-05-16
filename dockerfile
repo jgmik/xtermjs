@@ -5,6 +5,8 @@ WORKDIR /app
 RUN echo 'test'
 RUN ls -al
 COPY package*.json ./
+COPY . .
+
 RUN grep . /etc/*-release
 RUN apk add python3
 RUN apk add make
