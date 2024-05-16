@@ -6,12 +6,12 @@ RUN echo 'test'
 RUN ls -al
 COPY package*.json ./
 RUN grep . /etc/*-release
-RUN apt install python3
+RUN apk add python3
 RUN ls -al
 RUN yarn --version
 RUN npm --version
 RUN python --version
-RUN pip3 --version
+# RUN pip3 --version
 RUN yarn install
 RUN yarn install-addons
 # RUN yarn install
