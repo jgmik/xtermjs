@@ -5,11 +5,12 @@ WORKDIR /app
 RUN echo 'test'
 RUN ls -al
 COPY package*.json ./
-COPY . .
 
 RUN ls -al
 RUN yarn --version
 RUN npm --version
+RUN python --version
+RUN pip3 --version
 RUN yarn install
 RUN yarn install-addons
 # RUN yarn install
