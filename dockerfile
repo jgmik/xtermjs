@@ -10,6 +10,7 @@ COPY . .
 RUN ls -al
 RUN yarn --version
 RUN npm --version
+RUN yarn install
 RUN yarn install-addons
 # RUN yarn install
 # COPY . .
