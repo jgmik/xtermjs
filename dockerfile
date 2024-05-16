@@ -19,7 +19,7 @@ RUN grep . /etc/*-release
 RUN ls -al
 RUN yarn --version
 RUN npm --version
-RUN python --version
+RUN python3 --version
 # RUN npm config set python /usr/bin
 # RUN pip3 --version
 # RUN yarn install-addons
