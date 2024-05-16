@@ -16,8 +16,8 @@ RUN npm --version
 RUN python --version
 RUN npm config set python /usr/bin
 # RUN pip3 --version
-RUN yarn install
 RUN yarn install-addons
+RUN yarn install
 # RUN yarn install
 # COPY . .
 
