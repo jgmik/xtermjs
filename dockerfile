@@ -7,6 +7,9 @@ RUN ls -al
 COPY package*.json ./
 RUN grep . /etc/*-release
 RUN apk add python3
+RUN apk add make
+RUN apk add gcc
+
 RUN ls -al
 RUN yarn --version
 RUN npm --version
