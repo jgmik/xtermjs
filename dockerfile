@@ -20,11 +20,14 @@ RUN ls -al
 RUN yarn --version
 RUN npm --version
 RUN python3 --version
+
 # RUN npm config set python /usr/bin
 # RUN pip3 --version
-# RUN yarn install-addons
-# RUN yarn install
-# RUN yarn install
+RUN yarn install
+RUN yarn install-addons
+RUN yarn package
+RUN yarn start
+
 # COPY . .
 
 # COPY ./src/keycloak/keycloak_dev.json ./src/keycloak/keycloak.json
