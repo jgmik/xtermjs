@@ -26,7 +26,6 @@ RUN python3 --version
 RUN yarn install
 RUN yarn install-addons
 RUN yarn package
-RUN yarn start
 
 # COPY . .
 
@@ -42,4 +41,4 @@ RUN yarn start
 # COPY --from=builder /app/dist /usr/share/nginx/html
 
 # EXPOSE 8080
-# ENTRYPOINT ["nginx", "-g", "daemon off;"]
+ENTRYPOINT ["yarn", "start"]
